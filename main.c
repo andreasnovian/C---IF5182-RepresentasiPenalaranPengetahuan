@@ -6,7 +6,7 @@
 
 int main()
 {
-    char cmd, *arg;
+    char cmd, arg[100];
     tree *t = create_tree();
 
     printf("\ncommand : ");
@@ -16,7 +16,7 @@ int main()
     {
         if (cmd == 'a')
         {
-            scanf("%s", arg);
+            scanf("%s", &arg);
             insert_tree(t, arg);
             printf("Word '%s' added successfully\n", arg);
         }
